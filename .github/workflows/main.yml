@@ -68,8 +68,7 @@ jobs:
         run: |
           sudo arch-chroot ./mountpoint bash - <<'EOF'
           cat > /etc/pacman.d/mirrorlist << 'MIRRORS'
-          Server = https://de.mirror.archlinuxarm.org/$arch/$repo
-          Server = https://eu.mirror.archlinuxarm.org/$arch/$repo
+          Server = http://os.archlinuxarm.org/$arch/$repo
           MIRRORS
           EOF
       - name: Delete default user
